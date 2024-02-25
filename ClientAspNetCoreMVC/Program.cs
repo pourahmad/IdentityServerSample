@@ -16,12 +16,12 @@ builder.Services.AddAuthentication(option =>
     option.ClientId = "efe06a2e-2081-4362-a966-be477dde2ac6";
     option.GetClaimsFromUserInfoEndpoint = true;
     option.SignInScheme = "Cookies";
-    option.Scope.Add("role");
     option.Scope.Add("email");
     option.Scope.Add("phone");
     option.Scope.Add("profile");
     option.Scope.Add("fullName");
-
+    option.Scope.Add("permissions");
+    
     option.MapInboundClaims = false; // Don't rename claim types
 
     option.SaveTokens = true;
